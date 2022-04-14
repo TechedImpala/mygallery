@@ -1,0 +1,23 @@
+version: "3.2"
+services:
+  nginx:
+    depends_on:
+      - gallery
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"
+  gallery:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./gallery
+    environment:
+      # enable HOT reloading for ws https://github.com/facebook/create-react-app/issues/11897
+      WDS_SOCKET_PORT: 0
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - /gallery/node_modules
+      - ./gallery:/gallery
