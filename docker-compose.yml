@@ -14,10 +14,14 @@ services:
     build:
       dockerfile: Dockerfile.dev
       context: ./gallery
+      args:
+        REACT_APP_CLIENT_ID: ${REACT_APP_CLIENT_ID}
+    env_file:
+      - ./gallery/app.env
     environment:
       # enable HOT reloading for ws https://github.com/facebook/create-react-app/issues/11897
-      WDS_SOCKET_PORT: 0
-      CHOKIDAR_USEPOLLING: "true"
+      - WDS_SOCKET_PORT=0
+      - CHOKIDAR_USEPOLLING=true
     volumes:
       - /gallery/node_modules
       - ./gallery:/gallery

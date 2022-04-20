@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /gallery/node_modules
+/gallery/app.env
 /.pnp
 .pnp.js
 
