@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid: loads grid when a topic is selected 1`] = `
+<div>
+  <div
+    class="sc-hKMtZM hiNdfX"
+  >
+    <div
+      class="sc-eCYdqJ deoAcS"
+    >
+      <img
+        class="sc-jSMfEi jGEwmv"
+        color="#c0c0c0"
+        data-testid="image-JLDWc82d3U4"
+        src="http://gallery.test.com/photo-1650324705564-2eb0b6b23954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjA4OTh8MHwxfHRvcGljfHxibzhqUUtUYUUwWXx8fHx8Mnx8MTY1MDQwNDQwNQ&ixlib=rb-1.2.1&q=80&w=200"
+      />
+      <img
+        class="sc-jSMfEi jGEwmv"
+        color="#d9d9c0"
+        data-testid="image-xcEgnET1zHM"
+        src="http://gallery.test.com/photo-1650361072639-e2d0d4f7f3e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjA4OTh8MHwxfHRvcGljfHxibzhqUUtUYUUwWXx8fHx8Mnx8MTY1MDQwNDQwNQ&ixlib=rb-1.2.1&q=80&w=200"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid: sets grid active when selected 1`] = `
+<div>
+  <div
+    class="sc-hKMtZM hiNdfX"
+  >
+    <div
+      class="sc-eCYdqJ deoAcS"
+    >
+      <img
+        class="sc-jSMfEi NjztP"
+        color="#c0c0c0"
+        data-testid="image-JLDWc82d3U4"
+        src="http://gallery.test.com/photo-1650324705564-2eb0b6b23954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjA4OTh8MHwxfHRvcGljfHxibzhqUUtUYUUwWXx8fHx8Mnx8MTY1MDQwNDQwNQ&ixlib=rb-1.2.1&q=80&w=200"
+      />
+      <img
+        class="sc-jSMfEi jGEwmv"
+        color="#d9d9c0"
+        data-testid="image-xcEgnET1zHM"
+        src="http://gallery.test.com/photo-1650361072639-e2d0d4f7f3e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjA4OTh8MHwxfHRvcGljfHxibzhqUUtUYUUwWXx8fHx8Mnx8MTY1MDQwNDQwNQ&ixlib=rb-1.2.1&q=80&w=200"
+      />
+    </div>
+  </div>
+</div>
+`;

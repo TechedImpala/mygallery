@@ -2,5 +2,7 @@ FROM node:14.14.0-alpine
 WORKDIR /gallery
 COPY ./package.json ./
 RUN npm i
+ARG REACT_APP_CLIENT_ID
+ENV REACT_APP_CLIENT_ID $REACT_APP_CLIENT_ID
 COPY . .
 CMD ["npm", "run", "start"]

@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu: sets the active menu item when clicked 1`] = `
+<div>
+  <header
+    class="sc-hKMtZM faYLEy"
+  >
+    <div
+      class="sc-eCYdqJ bFwMrA"
+      data-testid="menu-item-color-of-water"
+    >
+      Color of Water
+    </div>
+    <div
+      class="sc-eCYdqJ bFwMrA"
+      data-testid="menu-item-people"
+    >
+      Person
+    </div>
+  </header>
+</div>
+`;

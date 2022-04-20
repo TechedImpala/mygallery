@@ -1,19 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
-const baseUrl = process.env.API_BASE_URL || "http://localhost:9000/api";
+const baseUrl = process.env.API_BASE_URL || "https://api.unsplash.com";
 
 export const axiosInstance = axios.create({
   baseURL: baseUrl,
   responseType: "json",
 });
 
-export default function useAxios<T>(requestConfig: AxiosRequestConfig) {
+interface IUseAxiosProps extends AxiosRequestConfig {
+  manual?: boolean;
+}
+
+const useAxios = <T>(requestConfig: IUseAxiosProps) => {
   const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<unknown>(null);
 
-  const handleRequest = () => {
+  const handleRequest = useCallback(() => {
     setLoading(true);
     axiosInstance
       .request(requestConfig)
@@ -25,13 +29,13 @@ export default function useAxios<T>(requestConfig: AxiosRequestConfig) {
         setError(error);
         setLoading(false);
       });
-  };
+  }, [requestConfig.url]);
 
   useEffect(() => {
-    handleRequest();
-  }, []);
+    if (!requestConfig.manual) handleRequest();
+  }, [requestConfig.manual, handleRequest]);
 
-  const response = { data, loading, error };
+  return { data: data as T, loading, error, handleRequest };
+};
 
-  return [response, handleRequest];
-}
+export default useAxios;

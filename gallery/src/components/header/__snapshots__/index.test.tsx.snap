@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header: correct text when grid state is active 1`] = `
+<div>
+  <header
+    class="sc-bczRLJ gIpnIp"
+  >
+    State: Menu is inactive and grid is active
+  </header>
+</div>
+`;
+
+exports[`Header: correct text when menu state is active 1`] = `
+<div>
+  <header
+    class="sc-bczRLJ gIpnIp"
+  >
+    State: Menu is active and grid is inactive
+  </header>
+</div>
+`;

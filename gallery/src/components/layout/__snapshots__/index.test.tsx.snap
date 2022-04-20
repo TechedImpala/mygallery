@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout: renders the menu and grid with no content 1`] = `
+<div>
+  <div
+    class="sc-jqUVSM hBbAhQ"
+  >
+    <header
+      class="sc-ftvSup icNAsx"
+    >
+      <div
+        class="sc-papXJ iiKwxX"
+        data-testid="menu-item-color-of-water"
+      >
+        Color of Water
+      </div>
+      <div
+        class="sc-papXJ iiKwxX"
+        data-testid="menu-item-people"
+      >
+        Person
+      </div>
+    </header>
+    <div
+      class="sc-gsnTZi kXspxg"
+    >
+      Please select a topic
+    </div>
+  </div>
+</div>
+`;

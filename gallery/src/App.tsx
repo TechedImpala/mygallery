@@ -1,9 +1,14 @@
-import logo from "./logo.svg";
+import Header from "./components/header";
+import Layout from "./components/layout";
+import AppProvider from "./context/AppContext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">this is my new docker app</header>
+      <AppProvider>
+        <Header />
+        <Layout />
+      </AppProvider>
     </div>
   );
 }
