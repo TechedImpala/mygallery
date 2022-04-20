@@ -21,11 +21,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Set workdir
-        run: cd ./gallery
       - name: Install project
+        working-directory: ./gallery
         run: npm install
       - name: Build the project
+        working-directory: ./gallery
         run: npm run build --if-present
       - name: Run tests
+        working-directory: ./gallery
         run: npm test
