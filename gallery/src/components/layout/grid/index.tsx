@@ -98,7 +98,7 @@ const Grid = () => {
 
   useEffect(() => {
     if (activeTopic) handleRequest();
-  }, [activeTopic]);
+  }, [activeTopic, handleRequest]);
 
   if (loading)
     return (
