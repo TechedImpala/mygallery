@@ -17,6 +17,8 @@ const useAxios = <T>(requestConfig: IUseAxiosProps) => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<unknown>(null);
 
+  const { url } = requestConfig;
+
   const handleRequest = useCallback(() => {
     setLoading(true);
     axiosInstance
@@ -29,7 +31,7 @@ const useAxios = <T>(requestConfig: IUseAxiosProps) => {
         setError(error);
         setLoading(false);
       });
-  }, [requestConfig.url]);
+  }, [url]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!requestConfig.manual) handleRequest();
